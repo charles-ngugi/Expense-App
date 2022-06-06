@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PROJECTS/Expenses/app/src/main/res/drawable/edit_text_design.xml" value="0.1825" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/drawable/ellipse_12_shape.xml" value="0.1825" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1825" />
+        <entry key="..\:/PROJECTS/Expenses/app/src/main/res/drawable/rounded_edittext.xml" value="0.1825" />
+        <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/activity_add_record.xml" value="0.18" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/custom_edit_text_cut.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/fragment_account.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/fragment_history.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
@@ -14,6 +18,8 @@
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/fragment_record.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/fragment_statistics_frgament.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/history_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/single_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/single_spinner_item.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/layout/singleexpense.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/menu/bottom_nav.xml" value="0.20416666666666666" />
         <entry key="..\:/PROJECTS/Expenses/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />

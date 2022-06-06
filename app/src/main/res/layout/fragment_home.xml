@@ -33,6 +33,16 @@
 
     </androidx.cardview.widget.CardView>
 
+    <ImageView
+        android:id="@+id/divider_ek2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginHorizontal="10dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/divider_ek2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -48,6 +58,15 @@
         android:textColor="#0E0F19"
         android:textSize="25sp"
         android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/divider_ek"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginHorizontal="10dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/divider_ek2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -55,11 +74,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#3F7198"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_input_add"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="TODO" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
@@ -69,8 +90,10 @@
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/divider_ek"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
