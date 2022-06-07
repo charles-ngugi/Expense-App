@@ -54,7 +54,7 @@
         android:layout_marginBottom="10dp"
         app:layout_constraintTop_toBottomOf="@+id/cardview"
         android:paddingLeft="10dp"
-        android:text="Top expenses:"
+        android:text="My Expenses:"
         android:textColor="#0E0F19"
         android:textSize="25sp"
         android:textStyle="bold" />

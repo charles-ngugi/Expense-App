@@ -8,5 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="amber">#FFBF00</color>
+    <color name="colorPrimary">#3F7198</color>
+    <color name="colorPrimaryDark">#7AA4BA</color>
+    <color name="colorAccent">#69A9B1</color>
     <color name="ellipse_12_ek1_color">#c4e6b7</color>
 </resources>
