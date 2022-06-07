@@ -19,7 +19,16 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Add_record extends AppCompatActivity {
@@ -30,6 +39,8 @@ public class Add_record extends AppCompatActivity {
     Button submit;
     EditText description, amount;
     String date;
+    String describe;
+    String amnt;
     String[] spinnerTitles = { "Clothing", "Food", "Gaming", "Shopping", "Transport", "Others" };
     int [] spinnerImages = { R.drawable.clothing,
             R.drawable.food,
@@ -37,6 +48,7 @@ public class Add_record extends AppCompatActivity {
             R.drawable.shopping,
             R.drawable.travel,
             R.drawable.others };
+    FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +65,9 @@ public class Add_record extends AppCompatActivity {
         amount = findViewById(R.id.amount);
         submit = findViewById(R.id.submit);
         date = showdate.getText().toString();
+        db = FirebaseFirestore.getInstance();
+//        describe = description.getText().toString();
+//        amnt = amount.getText().toString();
 
 
         // select date
@@ -96,12 +111,38 @@ public class Add_record extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //save data
         //submit button
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                describe = description.getText().toString();
+                amnt = amount.getText().toString();
+                String datee = showdate.getText().toString();
 
+                DocumentReference documentReference = db.collection("Expenses").document("Charles");
+                Map<String,Object> expenditure = new HashMap<>();
+                expenditure.put("category","cat" );
+                expenditure.put("description",describe);
+                expenditure.put("amount",amnt);
+                expenditure.put("date",date);
+                documentReference.set(expenditure).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(getApplicationContext(),"SUCCESS",Toast.LENGTH_LONG).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Add_record.this, "UNSUCCESSFUL", Toast.LENGTH_LONG).show();
+//                LottieAlertDialog alertDialog= new LottieAlertDialog.Builder(Good_owner_post.this, DialogTypes.TYPE_ERROR)
+//                        .setTitle("OOPS!!!")
+//                        .setDescription("Upload Unsuccessful")
+//                        .build();
+//                alertDialog.setCancelable(true);
+//                alertDialog.show();
+                    }
+                });
             }
         });
     }

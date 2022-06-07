@@ -38,8 +38,8 @@ dependencies {
     implementation 'com.airbnb.android:lottie:3.4.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation "com.github.skydoves:powerspinner:1.1.7"
-    implementation 'com.google.firebase:firebase-firestore:21.4.0'
-    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-firestore:24.1.2'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
 
 
     testImplementation 'junit:junit:4.13.2'
